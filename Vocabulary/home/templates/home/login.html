@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Django web app</title>
+</head>
+<body>
+    <h1>Login</h1>
+    <br />
+    <h3>
+        <a href="{% url 'home' %}">Back</a>
+    </h3>
+    <form action="" method="POST" enctype="multipart/form-data"> 
+        <fieldset class="fieldset login">
+            {% csrf_token %} 
+            <table>
+                {{ form.as_table }}
+            </table>
+            <input type="submit" value="Submit" />
+        </fieldset>
+    </form>
+</body>
+</html>
